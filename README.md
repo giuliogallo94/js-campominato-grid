@@ -19,3 +19,4 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 **2.** Creare la funzione che genera le celle
 **3.** Creare la funzione per fare in modo che al click corrisponda la visualizzazione della griglia con tutte le celle
 **4.** Aggiungere un evento al click all'interno di ogni cella, con quest'ultima che si colora in azzurro e che faccia spuntare il numero di cella in console.
+**5.** Aggiungere la select al lato del bottone "play" con le varie difficoltà di gioco
