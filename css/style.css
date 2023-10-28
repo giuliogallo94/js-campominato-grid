@@ -40,12 +40,23 @@ img {
 }
 
 .cell {
-  width: calc(100% / 10);
   aspect-ratio: 1;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.cell-w-1 {
+  width: calc(100% / 10);
+}
+
+.cell-w-2 {
+  width: calc(100% / 9);
+}
+
+.cell-w-3 {
+  width: calc(100% / 7);
 }
 
 .display-none {

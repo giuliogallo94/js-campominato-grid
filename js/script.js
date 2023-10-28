@@ -1,13 +1,46 @@
 // ESECUZIONE
 const gridElem = document.querySelector(".grid");
 
-for (let i = 1; i <= 100; i++) {
-  const gridNumber = i;
-  console.log(gridNumber);
-  //Genera la cella
-  const cell = generateGridCell(gridNumber);
-  cell.addEventListener("click", alternativeBg);
-  gridElem.append(cell);
+let selectLevel = document.getElementById("level");
+let gameLevel = selectLevel.options[selectLevel.selectedIndex].value;
+console.log(gameLevel);
+
+if (gameLevel === "1") {
+  console.log("ciao");
+  for (let i = 1; i <= 100; i++) {
+    let gridNumber = i;
+    console.log(gridNumber);
+    let cell = generateGridCell(gridNumber);
+    cell.addEventListener("click", function () {
+      cell.classList.add("bg-cyan");
+    });
+    gridElem.append(cell);
+    cell.classList.add("cell-w-1");
+  }
+} else if (gameLevel === "2") {
+  console.log("ciao");
+  for (let i = 1; i <= 81; i++) {
+    let gridNumber = i;
+    console.log(gridNumber);
+    let cell = generateGridCell(gridNumber);
+    cell.addEventListener("click", function () {
+      cell.classList.add("bg-cyan");
+    });
+    gridElem.append(cell);
+    cell.classList.add("cell-w-2");
+  }
+} else if (gameLevel === "3") {
+  console.log("ciao");
+  for (let i = 1; i <= 49; i++) {
+    let gridNumber = i;
+    console.log(gridNumber);
+    let cell = generateGridCell(gridNumber);
+    cell.addEventListener("click", function () {
+      cell.classList.add("bg-cyan");
+    });
+    gridElem.append(cell);
+    cell.classList.add("cell-w-3");
+  }
 }
 
 const playBtnElem = document.getElementById("play");
@@ -35,7 +68,6 @@ function generateGridCell(innerNumber) {
 function showGrid() {
   const mainGrid = document.getElementById("main-grid");
   mainGrid.classList.remove("display-none");
-  console.log("rimuovo classe e mostro griglia");
 }
 
 /**
@@ -44,7 +76,6 @@ function showGrid() {
  * @returns {any} aggiunta classe "bg-cyan"
  */
 function alternativeBg() {
-  const clickedCell = document.getElementsByClassName("cell");
-  clickedCell.classList.add("bg-cyan");
+  const clickedCell = clickedCell.classList.add("bg-cyan");
   console.log($gridNumber);
 }
