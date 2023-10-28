@@ -55,3 +55,7 @@ img {
 .bg-cyan {
   background-color: cyan;
 }
+
+.game-level {
+  padding: 0.5rem 1rem;
+}
