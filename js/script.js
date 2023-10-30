@@ -1,21 +1,7 @@
 // ESECUZIONE
 const gridElem = document.querySelector(".grid");
 
-let selectLevel = document.getElementById("level");
-let gameLevel = selectLevel.options[selectLevel.selectedIndex].value;
-console.log(gameLevel);
-
-if (gameLevel === "1") {
-  console.log("ciao");
-  gridCreation(100, "cell-w-1");
-} else if (gameLevel === "2") {
-  console.log("ciao");
-  gridCreation(81, "cell-w-2");
-} else if (gameLevel === "3") {
-  console.log("ciao");
-  gridCreation(49, "cell-w-3");
-}
-
+//Mostrare la griglia di gioco al click
 const playBtnElem = document.getElementById("play");
 playBtnElem.addEventListener("click", showGrid);
 
@@ -60,15 +46,16 @@ function gridCreation(cellNum, cellW) {
  */
 function showGrid() {
   const mainGrid = document.getElementById("main-grid");
+  mainGrid.innerHTML = "";
+
+  const gameLevel = document.getElementById("level").value;
+  console.log(gameLevel);
+  if (gameLevel === "1") {
+    gridCreation(100, "cell-w-1");
+  } else if (gameLevel === "2") {
+    gridCreation(81, "cell-w-2");
+  } else if (gameLevel === "3") {
+    gridCreation(49, "cell-w-3");
+  }
   mainGrid.classList.remove("display-none");
 }
-
-/**
- * Colora la cella cliccata
- * @param {any}
- * @returns {any} aggiunta classe "bg-cyan"
-//  */
-// function alternativeBg() {
-//   const clickedCell = clickedCell.classList.add("bg-cyan");
-//   console.log($gridNumber);
-// }

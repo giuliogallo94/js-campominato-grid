@@ -22,6 +22,15 @@ img {
   height: 100px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin-left: 0.5rem;
+}
+
 .btn {
   padding: 0.5rem 1rem;
 }
